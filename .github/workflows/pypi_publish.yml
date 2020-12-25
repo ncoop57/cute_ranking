@@ -34,5 +34,8 @@ jobs:
       run: |
         nbdev_test_nbs
     - name: Publishing to PyPi
+      env:
+        TWINE_USERNAME: ${{secrets.PYPI_USERNAME}}
+        TWINE_PASSWORD: ${{secrets.PYPI_PASSWORD}}
       run: |
         make release
