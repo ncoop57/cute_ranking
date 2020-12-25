@@ -3,7 +3,7 @@ output: web
 topnav_title: cute_ranking
 site_title: cute_ranking
 company_name: Nathan Cooper
-description: A cute little python module for calculating different ranking metrics. Based entirely on the gist from @bwhite: https://gist.github.com/bwhite/3726239.
+description: A cute little python module for calculating different ranking metrics. Based entirely on the gist from https://gist.github.com/bwhite/3726239.
 # Set to false to disable KaTeX math
 use_math: true
 # Add Google analytics id if you have one and want to use it here
