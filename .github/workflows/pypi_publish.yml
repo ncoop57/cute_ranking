@@ -40,3 +40,6 @@ jobs:
         TWINE_REPOSITORY: testpypi
       run: |
         make release
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Update version number
