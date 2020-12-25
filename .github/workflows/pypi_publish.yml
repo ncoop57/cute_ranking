@@ -37,6 +37,6 @@ jobs:
       env:
         TWINE_USERNAME: ${{secrets.PYPI_USERNAME}}
         TWINE_PASSWORD: ${{secrets.PYPI_PASSWORD}}
-        TWINE_REPOSITORY: pypitest
+        TWINE_REPOSITORY: testpypi
       run: |
         make release
