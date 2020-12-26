@@ -1,6 +1,6 @@
 {
   "cute_ranking": {
     "Overview": "/",
-    "module name here": "core.html"
+    "Core": "core.html"
   }
 }
