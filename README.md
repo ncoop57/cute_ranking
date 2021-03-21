@@ -2,6 +2,12 @@
 > A cute little python module for calculating different ranking metrics. Based entirely on the gist from https://gist.github.com/bwhite/3726239.
 
 
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/cute-ranking)](https://pypi.org/project/cute-ranking/)
+[![PyPI Status](https://badge.fury.io/py/cute-ranking.svg)](https://badge.fury.io/py/cute-ranking)
+[![PyPI Status](https://pepy.tech/badge/cute-ranking)](https://pepy.tech/project/cute-ranking)
+[![license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/ncoop57/cute-ranking/blob/main/LICENSE)
+
+
 ## Install
 
 Requires a minimum python installation of 3.6
@@ -10,7 +16,7 @@ Requires a minimum python installation of 3.6
 
 ## How to use
 
-```python
+```
 from cute_ranking.core import mean_reciprocal_rank
 
 relevancies = [[0, 0, 1], [0, 1, 0], [1, 0, 0]]
@@ -32,6 +38,8 @@ The library current supports the following information retrieval ranking metrics
 5. Mean Average Precision - `mean_average_precision`
 6. Discounted Cumulative Gain at K - `dcg_at_k`
 7. Normalized Discounted Cumulative Gain at K - `ndcg_at_k`
+8. Mean Rank - `mean_rank`
+9. Hit@k - `hit_rate_at_k`
 
 # Contributing
 PRs and issues welcome! Please make sure to read through the `CONTRIBUTING.md` doc for how to contribute :).

@@ -2,7 +2,9 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"mean_reciprocal_rank": "00_core.ipynb",
+index = {"hit_rate_at_k": "00_core.ipynb",
+         "mean_rank": "00_core.ipynb",
+         "mean_reciprocal_rank": "00_core.ipynb",
          "r_precision": "00_core.ipynb",
          "precision_at_k": "00_core.ipynb",
          "average_precision": "00_core.ipynb",
