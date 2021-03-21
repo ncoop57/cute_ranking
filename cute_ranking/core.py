@@ -37,8 +37,14 @@ def mean_rank(rs):
     Returns:
         Mean rank
     """
-    rs = [np.asarray(r).nonzero()[0][0] + 1 for r in rs]
-    return np.mean(rs)
+    _rs = []
+    for r in rs:
+        ids = np.asarray(r).nonzero()[0]
+        if len(ids) == 0:
+            _rs.append(0)
+        else:
+            _rs.append(ids[0] + 1)
+    return np.mean(_rs)
 
 # Cell
 def mean_reciprocal_rank(rs):

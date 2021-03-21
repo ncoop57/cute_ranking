@@ -167,6 +167,13 @@ Returns:
 <span class="n">mr</span> <span class="o">=</span> <span class="n">mean_rank</span><span class="p">(</span><span class="n">relevancies</span><span class="p">)</span>
 
 <span class="k">assert</span> <span class="n">MR_VAL</span> <span class="o">==</span> <span class="n">mr</span>
+
+<span class="n">MR_VAL</span> <span class="o">=</span> <span class="mf">0.3333333333333333</span>
+
+<span class="n">relevancies</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+<span class="n">mr</span> <span class="o">=</span> <span class="n">mean_rank</span><span class="p">(</span><span class="n">relevancies</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">MR_VAL</span><span class="p">,</span> <span class="n">mr</span>
 </pre></div>
 
     </div>
@@ -187,7 +194,7 @@ Returns:
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="mean_reciprocal_rank" class="doc_header"><code>mean_reciprocal_rank</code><a href="https://github.com/ncoop57/cute_ranking/tree/main/cute_ranking/core.py#L44" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>mean_reciprocal_rank</code>(<strong><code>rs</code></strong>)</p>
+<h4 id="mean_reciprocal_rank" class="doc_header"><code>mean_reciprocal_rank</code><a href="https://github.com/ncoop57/cute_ranking/tree/main/cute_ranking/core.py#L50" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>mean_reciprocal_rank</code>(<strong><code>rs</code></strong>)</p>
 </blockquote>
 <p>Score is reciprocal of the rank of the first relevant item
 First element is 'rank 1'.  Relevance is binary (nonzero is relevant).
@@ -259,7 +266,7 @@ Returns:
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="r_precision" class="doc_header"><code>r_precision</code><a href="https://github.com/ncoop57/cute_ranking/tree/main/cute_ranking/core.py#L59" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>r_precision</code>(<strong><code>r</code></strong>)</p>
+<h4 id="r_precision" class="doc_header"><code>r_precision</code><a href="https://github.com/ncoop57/cute_ranking/tree/main/cute_ranking/core.py#L65" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>r_precision</code>(<strong><code>r</code></strong>)</p>
 </blockquote>
 <p>Score is precision after all relevant documents have been retrieved
 Relevance is binary (nonzero is relevant).</p>
@@ -330,7 +337,7 @@ Returns:
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="precision_at_k" class="doc_header"><code>precision_at_k</code><a href="https://github.com/ncoop57/cute_ranking/tree/main/cute_ranking/core.py#L76" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>precision_at_k</code>(<strong><code>r</code></strong>, <strong><code>k</code></strong>)</p>
+<h4 id="precision_at_k" class="doc_header"><code>precision_at_k</code><a href="https://github.com/ncoop57/cute_ranking/tree/main/cute_ranking/core.py#L82" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>precision_at_k</code>(<strong><code>r</code></strong>, <strong><code>k</code></strong>)</p>
 </blockquote>
 <p>Score is precision @ k
 Relevance is binary (nonzero is relevant).</p>
@@ -422,7 +429,7 @@ Raises:
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="average_precision" class="doc_header"><code>average_precision</code><a href="https://github.com/ncoop57/cute_ranking/tree/main/cute_ranking/core.py#L95" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>average_precision</code>(<strong><code>r</code></strong>)</p>
+<h4 id="average_precision" class="doc_header"><code>average_precision</code><a href="https://github.com/ncoop57/cute_ranking/tree/main/cute_ranking/core.py#L101" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>average_precision</code>(<strong><code>r</code></strong>)</p>
 </blockquote>
 <p>Score is average precision (area under PR curve)
 Relevance is binary (nonzero is relevant).</p>
@@ -483,7 +490,7 @@ Returns:
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="mean_average_precision" class="doc_header"><code>mean_average_precision</code><a href="https://github.com/ncoop57/cute_ranking/tree/main/cute_ranking/core.py#L112" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>mean_average_precision</code>(<strong><code>rs</code></strong>)</p>
+<h4 id="mean_average_precision" class="doc_header"><code>mean_average_precision</code><a href="https://github.com/ncoop57/cute_ranking/tree/main/cute_ranking/core.py#L118" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>mean_average_precision</code>(<strong><code>rs</code></strong>)</p>
 </blockquote>
 <p>Score is mean average precision
 Relevance is binary (nonzero is relevant).</p>
@@ -550,7 +557,7 @@ Returns:
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="dcg_at_k" class="doc_header"><code>dcg_at_k</code><a href="https://github.com/ncoop57/cute_ranking/tree/main/cute_ranking/core.py#L126" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>dcg_at_k</code>(<strong><code>r</code></strong>, <strong><code>k</code></strong>, <strong><code>method</code></strong>=<em><code>0</code></em>)</p>
+<h4 id="dcg_at_k" class="doc_header"><code>dcg_at_k</code><a href="https://github.com/ncoop57/cute_ranking/tree/main/cute_ranking/core.py#L132" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>dcg_at_k</code>(<strong><code>r</code></strong>, <strong><code>k</code></strong>, <strong><code>method</code></strong>=<em><code>0</code></em>)</p>
 </blockquote>
 <p>Score is discounted cumulative gain (dcg)
 Relevance is positive real values.  Can use binary
@@ -646,7 +653,7 @@ Returns:
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="ndcg_at_k" class="doc_header"><code>ndcg_at_k</code><a href="https://github.com/ncoop57/cute_ranking/tree/main/cute_ranking/core.py#L153" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>ndcg_at_k</code>(<strong><code>r</code></strong>, <strong><code>k</code></strong>, <strong><code>method</code></strong>=<em><code>0</code></em>)</p>
+<h4 id="ndcg_at_k" class="doc_header"><code>ndcg_at_k</code><a href="https://github.com/ncoop57/cute_ranking/tree/main/cute_ranking/core.py#L159" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>ndcg_at_k</code>(<strong><code>r</code></strong>, <strong><code>k</code></strong>, <strong><code>method</code></strong>=<em><code>0</code></em>)</p>
 </blockquote>
 <p>Score is normalized discounted cumulative gain (ndcg)
 Relevance is positive real values.  Can use binary
